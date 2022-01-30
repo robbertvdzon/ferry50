@@ -20,4 +20,12 @@ git clone https://github.com/robbertvdzon/ferry50.git
 ### Make sure to start the robot and video player at boot time 
 cp ~/ferry50/autostart /home/pi/.config/lxsession/LXDE-pi/
 
+### Record video
+```
+sudo apt install kazam
+```
 
+### install video player
+``` 
+ffmpeg -i Screencast.webm abraham.avi
+```
