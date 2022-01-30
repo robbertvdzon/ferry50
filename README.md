@@ -11,14 +11,13 @@ sudo raspi-config
 sudo pip3 install adafruit-circuitpython-pca9685
 sudo pip3 install adafruit-circuitpython-servokit
 ```
-### Copy apps and video's to the pi 
-Copy the following files to ~:
-- abraham.py
-- abraham.mp4
 
-### Start application at boot time
-Create the following file '/home/pi/.config/lxsession/LXDE-pi/autostart'
-echo '/usr/bin/python /home/pi/abraham.py' >> /home/pi/.config/lxsession/LXDE-pi/autostart
+### Clone the project from github
+```
+git clone https://github.com/robbertvdzon/ferry50.git
+```
 
+### Make sure to start the robot and video player at boot time 
+cp ~/ferry50/autostart /home/pi/.config/lxsession/LXDE-pi/
 
 
