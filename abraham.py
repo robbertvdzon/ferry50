@@ -6,10 +6,10 @@ reach = 35
 reachShort = 15
 lower = 20
 delay = 0.3
-longdelay = 4.0
-numberOfTypeMovements = 6
-numberOfTypeLargeMovements = 3
-numberOfTypeHitMovements = 2
+longdelay = 6.0
+numberOfTypeMovements = 16
+numberOfTypeLargeMovements = 4
+numberOfTypeHitMovements = 3
 while(True):
     for x in range(numberOfTypeMovements):
         kit.servo[0].angle = middle - reachShort - lower
