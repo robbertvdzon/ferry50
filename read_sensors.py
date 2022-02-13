@@ -22,7 +22,7 @@ while True:
             f.write('')
 
 #          wait until move sensor is off
-        while GPIO.input(INPUT_PIN2):
+        while GPIO.input(INPUT_PIN2) == True:
             sleep(0.2);
 
     sleep(0.2);
