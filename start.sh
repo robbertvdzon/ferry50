@@ -1,3 +1,4 @@
+killall python
 /usr/bin/python /home/pi/ferry50/zwaailicht.py&
 /usr/bin/python /home/pi/ferry50/lampen.py&
 /usr/bin/python /home/pi/ferry50/beweeg_armen.py&
