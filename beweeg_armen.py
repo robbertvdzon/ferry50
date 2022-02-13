@@ -4,7 +4,7 @@ import os
 
 kit = ServoKit(channels=16)
 middle = 75
-reach = 35
+reach = 27 #35
 reachShort = 15
 lower = 20
 delay = 0.3
