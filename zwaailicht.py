@@ -12,7 +12,7 @@ GPIO.setup(RELAIS2, GPIO.OUT)
 
 
 while True:
-    if (os.path.isfile('/tmp/zwaailicht'))
+    if (os.path.isfile('/tmp/zwaailicht')):
         GPIO.output(RELAIS, 0)
         GPIO.output(RELAIS2, 0)
         sleep(3)
