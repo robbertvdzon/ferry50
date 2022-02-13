@@ -27,6 +27,12 @@ while True:
     pin1 = GPIO.input(INPUT_PIN) == True
     pin2 = GPIO.input(INPUT_PIN2) == True
 
+    print('pin1')
+    print(pin1)
+    print('pin2')
+    print(pin2)
+
+
     if (pin1 or pin2):
         GPIO.output(RELAIS, 0)
         GPIO.output(RELAIS2, 0)
