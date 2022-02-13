@@ -24,7 +24,7 @@ pi_pwm2.start(0)				#start PWM of required Duty Cycle
 
 while True:
 
-    pin1 = GPIO.input(INPUT_PIN) == True
+    pin1 = GPIO.input(INPUT_PIN) == False
     pin2 = GPIO.input(INPUT_PIN2) == True
 
     print('pin1')
