@@ -2,10 +2,11 @@
 
 from time import sleep
 import RPi.GPIO as GPIO
+import os
 
 GPIO.setmode(GPIO.BCM)
-LED_1 = 13 # naar relais
-LED_2 = 19 #ok
+LED_1 = 13
+LED_2 = 19
 GPIO.setup(LED_1, GPIO.OUT)
 GPIO.setup(LED_2, GPIO.OUT)
 
