@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 import os
 
 GPIO.setmode(GPIO.BCM)
-CYCLE_COUNT = 20
+CYCLE_COUNT = 40
 LED_1 = 13
 LED_2 = 19
 GPIO.setup(LED_1, GPIO.OUT)
