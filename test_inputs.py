@@ -23,12 +23,12 @@ while True:
 
     if (pin1):
         GPIO.output(RELAIS, 0)
-    else
+    else:
         GPIO.output(RELAIS, 1)
 
     if (pin2):
         GPIO.output(RELAIS, 0)
-    else
+    else:
         GPIO.output(RELAIS, 1)
 
     print('pin1: ', pin1)
