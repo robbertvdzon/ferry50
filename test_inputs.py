@@ -4,7 +4,7 @@ from time import sleep
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
-INPUT_PIN = 12
+INPUT_PIN = 21
 INPUT_PIN2 = 20
 
 GPIO.setup(INPUT_PIN, GPIO.IN)
