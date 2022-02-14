@@ -18,7 +18,7 @@ GPIO.setup(RELAIS2, GPIO.OUT)
 
 while True:
 
-    pin1 = GPIO.input(INPUT_PIN) == False
+    pin1 = GPIO.input(INPUT_PIN) == True
     pin2 = GPIO.input(INPUT_PIN2) == True
 
     if (pin1):
