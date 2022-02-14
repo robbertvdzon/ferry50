@@ -16,6 +16,6 @@ while True:
     pin2 = GPIO.input(INPUT_PIN2) == True
 
     print('pin1: ', pin1)
-    print('pin2: ', pin2)
+#     print('pin2: ', pin2)
 
     sleep(1);
