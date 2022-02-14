@@ -4,7 +4,7 @@ from time import sleep
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
-INPUT_PIN = 7
+INPUT_PIN = 12
 INPUT_PIN2 = 20
 
 GPIO.setup(INPUT_PIN, GPIO.IN)
@@ -18,7 +18,7 @@ GPIO.setup(RELAIS2, GPIO.OUT)
 
 while True:
 
-    pin1 = GPIO.input(INPUT_PIN) == True
+    pin1 = GPIO.input(INPUT_PIN) == False
     pin2 = GPIO.input(INPUT_PIN2) == True
 
     if (pin1):
