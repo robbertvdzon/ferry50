@@ -16,29 +16,29 @@ numberOfTypeHitMovements = 3
 while(True):
 
     if (os.path.isfile('/tmp/armen')):
-        for x in range(numberOfTypeMovements):
-            kit.servo[0].angle = middle - reachShort - lower
-            kit.servo[15].angle = middle - reachShort + lower
-            time.sleep(delay)
-            kit.servo[0].angle = middle + reachShort - lower
-            kit.servo[15].angle = middle + reachShort + lower
-            time.sleep(delay)
-
-        for x in range(numberOfTypeLargeMovements):
-            kit.servo[0].angle = middle - reach
-            kit.servo[15].angle = middle - reach
-            time.sleep(delay)
-            kit.servo[0].angle = middle + reach
-            kit.servo[15].angle = middle + reach
-            time.sleep(delay)
-
-        for x in range(numberOfTypeHitMovements):
-            kit.servo[0].angle = middle - reach
-            kit.servo[15].angle = middle + reach
-            time.sleep(delay)
-            kit.servo[0].angle = middle + reach
-            kit.servo[15].angle = middle - reach
-            time.sleep(delay)
+        # for x in range(numberOfTypeMovements):
+        #     kit.servo[0].angle = middle - reachShort - lower
+        #     kit.servo[15].angle = middle - reachShort + lower
+        #     time.sleep(delay)
+        #     kit.servo[0].angle = middle + reachShort - lower
+        #     kit.servo[15].angle = middle + reachShort + lower
+        #     time.sleep(delay)
+        #
+        # for x in range(numberOfTypeLargeMovements):
+        #     kit.servo[0].angle = middle - reach
+        #     kit.servo[15].angle = middle - reach
+        #     time.sleep(delay)
+        #     kit.servo[0].angle = middle + reach
+        #     kit.servo[15].angle = middle + reach
+        #     time.sleep(delay)
+        #
+        # for x in range(numberOfTypeHitMovements):
+        #     kit.servo[0].angle = middle - reach
+        #     kit.servo[15].angle = middle + reach
+        #     time.sleep(delay)
+        #     kit.servo[0].angle = middle + reach
+        #     kit.servo[15].angle = middle - reach
+        #     time.sleep(delay)
 
         kit.servo[0].angle = middle - reachBottom
         kit.servo[15].angle = middle + reachBottom
