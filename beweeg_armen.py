@@ -6,7 +6,7 @@ kit = ServoKit(channels=16)
 middle = 75
 reach = 27 #35
 reachShort = 15
-reachBottom = 60
+reachBottom = 40
 lower = 20
 delay = 0.3
 longdelay = 6.0
