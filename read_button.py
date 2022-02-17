@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
 from time import sleep
+from datetime import datetime
 import RPi.GPIO as GPIO
 
 def addLog(text):
     logfile = open('/home/pi/log.txt', 'a')
-    logfile.write(datetime.now().strftime("%m/%d/%Y, %H:%M:%S\n")+': '+text)
+    logfile.write(datetime.now().strftime("%m/%d/%Y, %H:%M:%S")+': '+text+"\n")
     logfile.close()
 
 
