@@ -16,9 +16,15 @@ GPIO.setup(INPUT_PIN2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 addLog('Start read_sensors.py')
 lastStatus = False
+
+pin2 = GPIO.input(INPUT_PIN2) == True
+print("Initial state is ", pin2)
+
 while True:
 
     pin2 = GPIO.input(INPUT_PIN2) == True
+    if (pin2 == !lastStatus):
+        print("change state to ", pin2)
 
     if (pin2):
         if (not lastStatus):
