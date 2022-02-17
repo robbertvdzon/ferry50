@@ -17,5 +17,5 @@ while True:
         GPIO.output(RELAIS, 0)
         GPIO.output(RELAIS2, 0)
         sleep(3)
-        GPIO.output(RELAIS, 1)
-        GPIO.output(RELAIS2, 1)
+    GPIO.output(RELAIS, 1)
+    GPIO.output(RELAIS2, 1)
