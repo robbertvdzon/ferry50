@@ -17,7 +17,7 @@ while True:
 
     if (pin2):
         print('aan ', datetime.now().time())
-        if (not lastStatus){
+        if (not lastStatus):
             addLog('movement detected')
             with open('/tmp/lampen', 'w') as f:
                 f.write('')
@@ -25,16 +25,16 @@ while True:
                 f.write('')
             with open('/tmp/zwaailicht', 'w') as f:
                 f.write('')
-        }
+
         #          wait until move sensor is off
         #         while GPIO.input(INPUT_PIN2) == True:
         #             sleep(0.2);
         #         print('uit ', datetime.now().time())
         # sleep(90); # sleep 60 sec
     else:
-        if (lastStatus){
+        if (lastStatus):
             addLog('movement stopped')
-        }
+
 
     lastStatus = pin2
 
