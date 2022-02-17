@@ -23,7 +23,7 @@ print("Initial state is ", pin2)
 while True:
 
     pin2 = GPIO.input(INPUT_PIN2) == True
-    if (pin2 == !lastStatus):
+    if (pin2 != lastStatus):
         print("change state to ", pin2)
 
     if (pin2):
