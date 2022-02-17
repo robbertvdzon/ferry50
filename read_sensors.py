@@ -9,25 +9,38 @@ INPUT_PIN2 = 20
 
 GPIO.setup(INPUT_PIN2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-
+addLog('Start read_sensors.py')
+lastStatus = False
 while True:
 
     pin2 = GPIO.input(INPUT_PIN2) == True
 
     if (pin2):
         print('aan ', datetime.now().time())
-
-        with open('/tmp/lampen', 'w') as f:
-            f.write('')
-        with open('/tmp/armen', 'w') as f:
-            f.write('')
-        with open('/tmp/zwaailicht', 'w') as f:
-            f.write('')
-
+        if (!movementDetected){
+            addLog('movement detected')
+            with open('/tmp/lampen', 'w') as f:
+                f.write('')
+            with open('/tmp/armen', 'w') as f:
+                f.write('')
+            with open('/tmp/zwaailicht', 'w') as f:
+                f.write('')
+        }
         #          wait until move sensor is off
         #         while GPIO.input(INPUT_PIN2) == True:
         #             sleep(0.2);
         #         print('uit ', datetime.now().time())
-        sleep(90); # sleep 60 sec
+        # sleep(90); # sleep 60 sec
+    else:
+        if (lastStatus){
+            addLog('movement stopped')
+        }
+
+    lastStatus = pin2
 
     sleep(0.2);
+
+def addLog(text):
+    logfile = open('~/log.txt', 'a')
+    logfile.write(datetime.now().time()+': '+text)
+    logfile.close()
