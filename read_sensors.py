@@ -13,7 +13,6 @@ GPIO.setup(INPUT_PIN2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 while True:
 
     pin2 = GPIO.input(INPUT_PIN2) == True
-    print(pin2)
 
     if (pin2):
         print('aan ', datetime.now().time())
@@ -25,10 +24,10 @@ while True:
         with open('/tmp/zwaailicht', 'w') as f:
             f.write('')
 
-#          wait until move sensor is off
-#         while GPIO.input(INPUT_PIN2) == True:
-#             sleep(0.2);
-#         print('uit ', datetime.now().time())
-        sleep(1); # sleep 60 sec
+        #          wait until move sensor is off
+        #         while GPIO.input(INPUT_PIN2) == True:
+        #             sleep(0.2);
+        #         print('uit ', datetime.now().time())
+        sleep(90); # sleep 60 sec
 
-    sleep(1);
+    sleep(0.2);
