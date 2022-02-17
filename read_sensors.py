@@ -6,7 +6,7 @@ import RPi.GPIO as GPIO
 
 def addLog(text):
     logfile = open('/home/pi/ferry50/log.txt', 'a')
-    logfile.write(datetime.now().time()+': '+text)
+    logfile.write(now.strftime("%m/%d/%Y, %H:%M:%S")+': '+text)
     logfile.close()
 
 GPIO.setmode(GPIO.BCM)
