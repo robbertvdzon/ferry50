@@ -4,6 +4,11 @@ from time import sleep
 from datetime import datetime
 import RPi.GPIO as GPIO
 
+def addLog(text):
+    logfile = open('~/log.txt', 'a')
+    logfile.write(datetime.now().time()+': '+text)
+    logfile.close()
+
 GPIO.setmode(GPIO.BCM)
 INPUT_PIN2 = 20
 
@@ -40,7 +45,4 @@ while True:
 
     sleep(0.2);
 
-def addLog(text):
-    logfile = open('~/log.txt', 'a')
-    logfile.write(datetime.now().time()+': '+text)
-    logfile.close()
+
