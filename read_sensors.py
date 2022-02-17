@@ -17,7 +17,7 @@ while True:
 
     if (pin2):
         print('aan ', datetime.now().time())
-        if (!lastStatus){
+        if (not lastStatus){
             addLog('movement detected')
             with open('/tmp/lampen', 'w') as f:
                 f.write('')
