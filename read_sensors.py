@@ -12,7 +12,7 @@ def addLog(text):
 GPIO.setmode(GPIO.BCM)
 INPUT_PIN2 = 20
 
-GPIO.setup(INPUT_PIN2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(INPUT_PIN2, GPIO.IN)
 
 addLog('Start read_sensors.py')
 lastStatus = False
