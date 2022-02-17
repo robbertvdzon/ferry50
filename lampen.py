@@ -34,4 +34,5 @@ while True:
 
         pi_pwm.ChangeDutyCycle(0)
         pi_pwm2.ChangeDutyCycle(0)
+    sleep(0.2)
 
