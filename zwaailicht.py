@@ -13,9 +13,9 @@ GPIO.setup(RELAIS2, GPIO.OUT)
 
 while True:
     if (os.path.isfile('/tmp/zwaailicht')):
+        os.remove("/tmp/zwaailicht")
         GPIO.output(RELAIS, 0)
         GPIO.output(RELAIS2, 0)
         sleep(3)
         GPIO.output(RELAIS, 1)
         GPIO.output(RELAIS2, 1)
-        os.remove("/tmp/zwaailicht")

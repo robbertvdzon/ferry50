@@ -19,7 +19,7 @@ pi_pwm2.start(0)
 
 while True:
     if (os.path.isfile('/tmp/lampen')):
-
+        os.remove("/tmp/lampen")
         for cycles in range(0,CYCLE_COUNT):
             for duty in range(0,101,5):
                 pi_pwm.ChangeDutyCycle(duty)
@@ -34,5 +34,4 @@ while True:
 
         pi_pwm.ChangeDutyCycle(0)
         pi_pwm2.ChangeDutyCycle(0)
-        os.remove("/tmp/lampen")
 

@@ -25,8 +25,9 @@ while True:
             f.write('')
 
 #          wait until move sensor is off
-        while GPIO.input(INPUT_PIN2) == True:
-            sleep(0.2);
-        print('uit ', datetime.now().time())
+#         while GPIO.input(INPUT_PIN2) == True:
+#             sleep(0.2);
+#         print('uit ', datetime.now().time())
+        sleep(90); # sleep 60 sec
 
     sleep(0.2);

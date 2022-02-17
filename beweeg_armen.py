@@ -10,12 +10,13 @@ reachBottom = 40
 lower = 20
 delay = 0.3
 longdelay = 6.0
-numberOfTypeMovements = 16
+numberOfTypeMovements = 8
 numberOfTypeLargeMovements = 4
 numberOfTypeHitMovements = 3
 while(True):
 
     if (os.path.isfile('/tmp/armen')):
+        os.remove("/tmp/armen")
         for x in range(numberOfTypeMovements):
             kit.servo[0].angle = middle - reachShort - lower
             kit.servo[15].angle = middle - reachShort + lower
@@ -42,7 +43,6 @@ while(True):
 
         kit.servo[0].angle = middle - reachBottom
         kit.servo[15].angle = middle + reachBottom
-        os.remove("/tmp/armen")
 
 
     time.sleep(0.2)
