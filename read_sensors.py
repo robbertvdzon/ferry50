@@ -21,7 +21,6 @@ while True:
     pin2 = GPIO.input(INPUT_PIN2) == True
 
     if (pin2):
-        print('aan ', datetime.now().time())
         if (not lastStatus):
             addLog('movement detected')
             with open('/tmp/lampen', 'w') as f:
