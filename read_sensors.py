@@ -27,20 +27,17 @@ while True:
         print("change state to ", pin2)
 
     if (pin2):
+        # lampen aan laten zolng er beweging is
+        with open('/tmp/lampen', 'w') as f:
+            f.write('')
+
+        # armen en zwaailicht alleen als er een nieuw iemand langsloopt
         if (not lastStatus):
             addLog('movement detected')
-            with open('/tmp/lampen', 'w') as f:
-                f.write('')
             with open('/tmp/armen', 'w') as f:
                 f.write('')
             with open('/tmp/zwaailicht', 'w') as f:
                 f.write('')
-
-        #          wait until move sensor is off
-        #         while GPIO.input(INPUT_PIN2) == True:
-        #             sleep(0.2);
-        #         print('uit ', datetime.now().time())
-        # sleep(90); # sleep 60 sec
     else:
         if (lastStatus):
             addLog('movement stopped')
